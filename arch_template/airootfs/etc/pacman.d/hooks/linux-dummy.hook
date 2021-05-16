@@ -1,0 +1,12 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = zfs-linux-lts
+
+[Action]
+Description = Renaming zfs-linux-lts to linux...
+When = PostTransaction
+Depends = zfs-linux-lts
+Exec = /usr/bin/sh -c 'cp /boot/vmlinuz-linux-lts /boot/vmlinuz-linux; cp /boot/initramfs-linux-lts.img /boot/initramfs-linux.img'
