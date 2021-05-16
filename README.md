@@ -6,7 +6,7 @@ yay -syu ventoy-bin
 ```
 ## Prepare ISO
 ```bash
-sudo mkarchiso -v -w /home/alteriks/tmp/arch/dynamic_data -o out arch_template
+sudo mkarchiso -v -w /home/alteriks/tmp/arch_dynamic_data -o /home/alteriks/tmp/arch_out arch_template
 ```
 ## Ventoy workaround
 It seems that Ventoy in UEFI mode uses hardcoded 'linux-vmlinuz' entry in it's hooks, so zfs-linux hangs during boot with:
